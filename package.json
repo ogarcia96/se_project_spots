@@ -1,0 +1,20 @@
+{
+  "name": "se_project_spots-main",
+  "version": "1.0.0",
+  "description": "Making a new image sharing site from sratch and getting it as close to or exact to the orignal, as to the pre-fab templates it uses from Figma.",
+  "homepage": "https://github.com/ogarcia96/se_project_spots#readme",
+  "bugs": {
+    "url": "https://github.com/ogarcia96/se_project_spots/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ogarcia96/se_project_spots.git"
+  },
+  "license": "ISC",
+  "author": "Oscar Garcia",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
