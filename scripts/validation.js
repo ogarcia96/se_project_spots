@@ -1,16 +1,16 @@
-const showInputError = (formEl, inputEl, errorMessage, config) => {
+export const showInputError = (formEl, inputEl, errorMessage, config) => {
   const errorMessageEL = formEl.querySelector(`#${inputEl.id}-error`);
   errorMessageEL.textContent = errorMessage;
   inputEl.classList.add(config.inputErrorClass);
 };
 
-const hideInputError = (formEl, inputEl, config) => {
+export const hideInputError = (formEl, inputEl, config) => {
   const errorMessageEL = formEl.querySelector(`#${inputEl.id}-error`);
   errorMessageEL.textContent = "";
   inputEl.classList.remove(config.inputErrorClass);
 };
 
-const checkInputValidity = (formEl, inputEl, config) => {
+export const checkInputValidity = (formEl, inputEl, config) => {
   if (!inputEl.validity.valid) {
     showInputError(formEl, inputEl, inputEl.validationMessage, config);
   } else {
@@ -18,13 +18,13 @@ const checkInputValidity = (formEl, inputEl, config) => {
   }
 };
 
-const hasInvalidInput = (inputList) => {
+export const hasInvalidInput = (inputList) => {
   return inputList.some((input) => {
     return !input.validity.valid;
   });
 };
 
-const toggleButtonState = (inputList, buttonEL, config) => {
+export const toggleButtonState = (inputList, buttonEL, config) => {
   if (hasInvalidInput(inputList)) {
     disableButton(buttonEL, config);
   } else {
@@ -33,12 +33,12 @@ const toggleButtonState = (inputList, buttonEL, config) => {
   }
 };
 
-const disableButton = (buttonEL, config) => {
+export const disableButton = (buttonEL, config) => {
   buttonEL.disabled = true;
   buttonEL.classList.add(config.inactiveButtonClass);
 };
 
-const resetValidation = (formEl, inputList, config) => {
+export const resetValidation = (formEl, inputList, config) => {
   inputList.forEach((inputEl) => {
     hideInputError(formEl, inputEl, config);
   });
@@ -47,7 +47,7 @@ const resetValidation = (formEl, inputList, config) => {
   toggleButtonState(inputList, buttonEl, config);
 };
 
-const setEventListeners = (formEl, config) => {
+export const setEventListeners = (formEl, config) => {
   const inputList = Array.from(formEl.querySelectorAll(config.inputSelector));
   const buttonElement = formEl.querySelector(config.submitButtonSelector);
 

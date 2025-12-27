@@ -1,4 +1,10 @@
-import { enableValidation, settings } from "./validation.js";
+import {
+  enableValidation,
+  settings,
+  resetValidation,
+  disableButton,
+  checkInputValidity,
+} from "./validation.js";
 
 const initialCards = [
   {
@@ -200,3 +206,5 @@ initialCards.forEach(function (item) {
 });
 
 enableValidation(settings);
+checkInputValidity(formEL, inputEL, config);
+disableButton(buttonEL, config);
