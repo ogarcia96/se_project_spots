@@ -1,10 +1,14 @@
-import "../styles/index.css";
+import "../images/avatar.jpg";
+import "../images/pencil.svg";
+import "../images/plus.svg";
+
+import "./index.css";
+
 import {
   enableValidation,
   settings,
   resetValidation,
   disableButton,
-  checkInputValidity,
 } from "../scripts/validation.js";
 
 const initialCards = [
@@ -61,9 +65,7 @@ const profileDescriptionEl = document.querySelector(".profile__description");
 // Modal for previewing images
 // This modal is used to preview images when clicked on a card image
 const previewModal = document.querySelector("#preview-modal");
-const previewModalCloseButton = previewModal.querySelector(
-  ".modal__close-button"
-);
+const previewModalCloseButton = previewModal.querySelector(".modal__close-btn");
 const previewImage = previewModal.querySelector(".modal__image");
 const previewTitle = previewModal.querySelector(".modal__caption");
 previewModalCloseButton.addEventListener("click", () => {
@@ -207,5 +209,3 @@ initialCards.forEach(function (item) {
 });
 
 enableValidation(settings);
-checkInputValidity(formEL, inputEL, config);
-disableButton(buttonEL, config);

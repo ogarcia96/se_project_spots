@@ -6,18 +6,22 @@
     <meta name="author" content="Oscar Garcia" />
     <meta name="description" content="???" />
     <meta name="keywords" content="Spots" />
-    <link rel="icon" href="./favicon.ico" />
+    <link rel="icon" href="<%=require('./images/favicon.ico')%>" />
     <title>Spots</title>
   </head>
   <body>
     <div class="page">
       <header class="header">
-        <img src="./images/Logo.svg" alt="spot logo" class="header__logo" />
+        <img
+          src="<%=require('./images/Logo.svg')%>"
+          alt="spot logo"
+          class="header__logo"
+        />
       </header>
       <main class="content">
         <section class="profile page__section">
           <img
-            src="./images/avatar.jpg"
+            src="<%=require('./images/avatar.jpg')%>"
             alt="Bessie Coleman"
             class="profile__avatar"
           />
@@ -31,11 +35,13 @@
               in modern world...
             </p>
             <button type="button" class="profile__edit-btn">
-              <img src="./images/pencil.svg" alt="pencil" />Edit Profile
+              <img src="<%=require('./images/pencil.svg')%>" alt="pencil" />Edit
+              Profile
             </button>
           </div>
           <button type="button" class="profile__add-btn">
-            <img src="./images/plus.svg" alt="plus icon" />New Post
+            <img src="<%=require('./images/plus.svg')%>" alt="plus icon" />New
+            Post
           </button>
         </section>
         <section class="cards page__section">
@@ -132,7 +138,7 @@
         <div class="modal__container modal__container_preview">
           <button
             type="button"
-            class="modal__close-button modal__close-button_preview"
+            class="modal__close-btn modal__close-btn_preview"
           ></button>
           <img src="#" alt="" class="modal__image" />
           <p class="modal__caption"></p>

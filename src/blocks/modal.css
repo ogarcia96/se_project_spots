@@ -45,7 +45,7 @@
   opacity: 0.4;
 }
 
-.modal__close-button_preview {
+.modal__close-btn_preview {
   background-image: url(../images/close-btn-preview.svg);
   top: 0;
   right: -52.5px;
@@ -57,14 +57,14 @@
   position: absolute;
 }
 
-.modal__close-button_preview:hover {
-  background-image: url(../images/close-btn-preview-hover.svg);
+.modal__close-btn_preview:hover {
+  background-image: url(../images/close-btn-preview.svg);
   opacity: 1;
   cursor: pointer;
   color: rgba(255, 255, 255, 1);
 }
 
-.modal__close-button:hover {
+.modal__close-btn:hover {
   opacity: 1;
   transition: opacity 0.5s;
 }
@@ -150,7 +150,7 @@
 }
 
 .modal__submit-btn:disabled {
-  background-color: opacity(0.5);
+  opacity: 0.5;
   cursor: not-allowed;
 }
 
@@ -220,7 +220,7 @@
   .modal__container_preview {
     padding: 0;
   }
-  .modal__close-button_preview {
+  .modal__close-btn_preview {
     top: -48px;
     right: 0;
     width: 32px;
